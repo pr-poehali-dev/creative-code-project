@@ -4,6 +4,7 @@ import Modal from "@/components/Modal";
 import TeachersTab from "@/components/tabs/TeachersTab";
 import ProfileTab from "@/components/tabs/ProfileTab";
 import PlaceholderTab from "@/components/tabs/PlaceholderTab";
+import ContactsTab from "@/components/tabs/ContactsTab";
 
 const TabsSection = () => {
   const [openModal, setOpenModal] = useState<string | null>(null);
@@ -77,6 +78,15 @@ const TabsSection = () => {
           </span>
         </button>
       </div>
+
+      <Modal
+        isOpen={openModal === "contacts"}
+        onClose={closeModal}
+        title="Контакты"
+        size="md"
+      >
+        <ContactsTab />
+      </Modal>
 
       <Modal
         isOpen={openModal === "teachers"}
@@ -157,6 +167,15 @@ const TabsSection = () => {
         size="md"
       >
         <ProfileTab />
+      </Modal>
+
+      <Modal
+        isOpen={openModal === "contacts"}
+        onClose={closeModal}
+        title="Контакты"
+        size="md"
+      >
+        <ContactsTab />
       </Modal>
     </div>
   );

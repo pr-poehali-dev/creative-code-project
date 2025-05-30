@@ -31,4 +31,14 @@ export const tabsConfig: TabConfig[] = [
       border: "border-blue-200",
     },
   },
+  {
+    id: "contacts",
+    label: "Контакты",
+    icon: "Phone",
+    colors: {
+      bg: "from-indigo-50 to-indigo-100 border-indigo-200",
+      text: "text-indigo-800",
+      border: "border-indigo-200",
+    },
+  },
 ];
